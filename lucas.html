@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas | Branch Five</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--
+==================================================
+LUCAS — SUA PARTE COMEÇA AQUI
+==================================================
+
+ALTERE SOMENTE ESTAS 3 COISAS:
+
+1. ESCOLHA SUA COR
+Procure a linha do body com style="--page-color: ..."
+e troque a cor. Exemplo: #EAF2FF.
+
+2. ADICIONE SUA FOTO
+Coloque sua foto dentro da pasta images/.
+Exemplo: images/lucas.jpg
+Depois altere:
+src="images/profile-placeholder.svg"
+para:
+src="images/lucas.jpg"
+Use exatamente o nome e a extensão do arquivo da sua foto.
+
+3. EDITE SEU TEXTO
+Altere somente o conteúdo dentro de:
+<p class="profile-text">
+Escreva seu texto em inglês.
+
+Quando terminar, SALVE O ARQUIVO.
+Depois faremos:
+git add lucas.html images/lucas.jpg
+git commit -m "Update Lucas profile"
+git push -u origin lucas-page
+Se sua foto tiver outro nome, ajuste o comando git add.
+
+NÃO PRECISA ALTERAR style.css.
+NÃO PRECISA ALTERAR script.js.
+NÃO ALTERE A PÁGINA DOS OUTROS INTEGRANTES.
+
+==================================================
+LUCAS — SUA PARTE TERMINA AQUI
+==================================================
+-->
+<!-- LUCAS: TROQUE SUA COR AQUI -->
+<body style="--page-color: #DBEAFE;">
+    <header>
+        <nav class="container" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="larissa.html">Larissa</a>
+            <a href="felipe.html">Felipe</a>
+            <a href="andre.html">Andre</a>
+            <a href="luiz.html">Luiz</a>
+            <a href="lucas.html" class="active" aria-current="page">Lucas</a>
+        </nav>
+    </header>
+
+    <main class="profile-page">
+        <div class="profile-container container">
+            <!-- LUCAS: TROQUE A IMAGEM AQUI -->
+            <img
+                src="images/profile-placeholder.svg"
+                alt="Lucas"
+                class="profile-photo"
+                width="300"
+                height="300"
+            >
+            <div class="profile-content">
+                <h1>Lucas</h1>
+                <!-- LUCAS: EDITE SEU TEXTO AQUI -->
+                <p class="profile-text">
+                    Hi, I'm Lucas. I'm a Computing and IT student at CCT College Dublin.
+                    This is my contribution to our first collaborative GitHub project.
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
