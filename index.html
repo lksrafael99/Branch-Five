@@ -5,11 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Branch Five | Our First Collaborative GitHub Project</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hero .button {
+            background: #f97316;
+            color: #000000;
+        }
+
+        .hero .button:hover {
+            background: #fb923c;
+        }
+
+        .hero {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            width: 100%;
+            max-width: none;
+            min-height: 560px;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+            background: #1e293b;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.3));
+            pointer-events: none;
+        }
+
+        .hero-text {
+            min-width: 0;
+            width: 50%;
+            max-width: 600px;
+            margin-left: 5%;
+            margin-right: auto;
+        }
+
+        .hero h1 {
+            color: #f97316;
+        }
+
+        .hero h1 span {
+            color: #000000;
+        }
+
+        .hero-text h2,
+        .hero-text > p {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-text .label {
+            color: #bfdbfe;
+        }
+
+        .hero-text > p:not(.label) {
+            color: #e2e8f0;
+        }
+
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        @media (max-width: 700px) {
+            .hero-text {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero {
+                min-height: 520px;
+                padding: 56px 0;
+            }
+        }
+
+        .team-card {
+            text-align: center;
+        }
+
+        .team-card .initial {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <nav class="container" aria-label="Main navigation">
+            <a href="index.html" class="nav-brand" aria-label="Branch Five home">Branch <span>Five</span></a>
             <a href="index.html" class="active" aria-current="page">Home</a>
             <a href="larissa.html">Larissa</a>
             <a href="felipe.html">Felipe</a>
@@ -21,12 +119,17 @@
 
     <main id="home-content">
         <section class="hero container">
-            <p class="label">CCT COLLEGE DUBLIN</p>
-            <h1>Branch Five</h1>
-            <h2>Our First Collaborative GitHub Project</h2>
-            <p>This simple website was created by five students working together on the same GitHub repository.</p>
-            <p class="hero-note">Each member contributed to the project using their own branch, commit and pull request.</p>
-            <a class="button" id="team-button" href="#team">Meet the Team <span aria-hidden="true">↓</span></a>
+            <div class="hero-text container">
+                <p class="label">CCT COLLEGE DUBLIN</p>
+                <h1>Branch <span>Five</span></h1>
+                <h2>Our First Collaborative GitHub Project</h2>
+                <p>This simple website was created by five students working together on the same GitHub repository.</p>
+                <p class="hero-note">Each member contributed to the project using their own branch, commit and pull request.</p>
+                <a class="button" id="team-button" href="#team">Meet the Team</a>
+            </div>
+            <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
+                <source src="images/hero.mp4" type="video/mp4">
+            </video>
         </section>
 
         <section class="team-section container" id="team">
@@ -35,27 +138,27 @@
                 <a class="team-card" href="larissa.html">
                     <span class="initial" style="background: #FCE7F3;" aria-hidden="true">L</span>
                     <h3>Larissa</h3>
-                    <p>View profile <span aria-hidden="true">→</span></p>
+                    <p>View profile</p>
                 </a>
                 <a class="team-card" href="felipe.html">
                     <span class="initial" style="background: #DCFCE7;" aria-hidden="true">F</span>
                     <h3>Felipe</h3>
-                    <p>View profile <span aria-hidden="true">→</span></p>
+                    <p>View profile</p>
                 </a>
                 <a class="team-card" href="andre.html">
                     <span class="initial" style="background: #FEF3C7;" aria-hidden="true">A</span>
                     <h3>Andre</h3>
-                    <p>View profile <span aria-hidden="true">→</span></p>
+                    <p>View profile</p>
                 </a>
                 <a class="team-card" href="luiz.html">
                     <span class="initial" style="background: #EDE9FE;" aria-hidden="true">L</span>
                     <h3>Luiz</h3>
-                    <p>View profile <span aria-hidden="true">→</span></p>
+                    <p>View profile</p>
                 </a>
                 <a class="team-card" href="lucas.html">
                     <span class="initial" style="background: #DBEAFE;" aria-hidden="true">L</span>
                     <h3>Lucas</h3>
-                    <p>View profile <span aria-hidden="true">→</span></p>
+                    <p>View profile</p>
                 </a>
             </div>
         </section>

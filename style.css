@@ -50,13 +50,71 @@ nav {
 nav a {
     font-size: 14px;
     padding: 6px 0;
-    border-bottom: 2px solid transparent;
-    transition: color 0.2s;
 }
 
-nav a:hover, nav a.active {
-    color: #2563eb;
-    border-bottom-color: #2563eb;
+nav {
+    justify-content: flex-start;
+}
+
+nav .nav-brand {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: -0.7px;
+    color: #f97316;
+    margin-right: auto;
+    white-space: nowrap;
+}
+
+nav .nav-brand span {
+    color: #000000;
+}
+
+nav .nav-brand::after {
+    content: none;
+}
+
+@media (max-width: 700px) {
+    nav .nav-brand {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+}
+
+nav a {
+    position: relative;
+    border-bottom: none;
+    transition: color 0.2s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f97316;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a.active {
+    color: #c2410c;
+}
+
+nav a:hover::after,
+nav a:focus-visible::after,
+nav a.active::after {
+    transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    nav a,
+    nav a::after {
+        transition: none;
+    }
 }
 
 /* Home */
@@ -271,7 +329,7 @@ footer {
 @media (max-width: 700px) {
     nav {
         gap: 8px 20px;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .hero {
